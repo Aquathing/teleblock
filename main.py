@@ -63,7 +63,7 @@ def block_if_not_contacts(client: Client, message: Message):
         return
 
     # we don't want to block any person that sends a group message
-    if not message.chat.type.PRIVATE:
+    if not message.chat.type == ChatType.PRIVATE:
         return
 
     # if the user is a bot or in our contacts or whitelisted, it should be fine
