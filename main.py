@@ -3,7 +3,7 @@ from pyrogram.types import Message
 from pyrogram.errors import FloodWait
 from json import loads
 
-config = loads(open("api_keys.json", 'r').read())
+config = loads(open("config.json", 'r').read())
 app = Client("my_account", config["api_id"], config["api_hash"])
 
 
